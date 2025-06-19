@@ -16,11 +16,8 @@ def create_app():
     """Create and configure the Flask application."""
 
     app = Flask(__name__)
-    CORS(
-        app,
-        resources={r"/api/*": {"origins": ["http://localhost:3000", "http://localhost:5173"]}},
-        supports_credentials=True,
-    )
+    # Allow all origins in production - you may want to restrict this later
+    CORS(app, resources={"/api/*": {"origins": "*"}}, supports_credentials=True)
 
     # --------------------------------------------------
     # Firebase initialisation
