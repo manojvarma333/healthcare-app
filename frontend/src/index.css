@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom color utilities */
+:root {
+  --primary: #2563EB;
+  --secondary: #10B981;
+  --rose: #F43F5E;
+}
+.text-primary { color: var(--primary); }
+.bg-primary { background-color: var(--primary); }
+.border-primary { border-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.border-secondary { border-color: var(--secondary); }
+.bg-rose-500 { background-color: var(--rose); }
